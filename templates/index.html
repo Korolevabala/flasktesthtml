@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-<h1>Heya</h1>
-{% block content  -%}
-    <ul>
-    {% for m in menu -%}
-    <li>{{ m }}</li>
-    {% endfor -%}
-    </ul>
-{% endblock -%}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<p>Текст страницы</p>
+{% endblock %}
